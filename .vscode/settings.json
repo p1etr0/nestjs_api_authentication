@@ -1,0 +1,9 @@
+{
+    "scm.defaultViewMode": "tree",
+    "search.defaultViewMode": "tree",
+    "comments.openView": "firstFile",
+    "workbench.editor.sharedViewState": false,
+    "workbench.view.alwaysShowHeaderActions": false,
+    "workbench.editor.restoreViewState": true,
+    "explorer.compactFolders": false
+}
