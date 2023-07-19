@@ -41,11 +41,15 @@ export class UsersService {
       },
     });
 
-    await this.mailService.send(
-      email,
-      `Ativação de conta`,
-      `Ative sua conta\n Código: ${confirmationCode}`,
-    );
+    try {
+      await this.mailService.send(
+        email,
+        `Ativação de conta`,
+        `Ative sua conta\n Código: ${confirmationCode}`,
+      );
+    } catch (e: any) {
+      console.log(`E-mail not sent - ${JSON.stringify(e)}`);
+    }
 
     return { id: user.id, active: user.active };
   }
